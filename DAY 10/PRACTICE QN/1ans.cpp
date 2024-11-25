@@ -1,3 +1,7 @@
+
+// MAx Sub Array -> n*(n+1)/2
+// Max subarray -> using a Brute Force Approach
+
 #include<iostream>
 #include<vector>
 #include <limits>
@@ -20,3 +24,7 @@ int main ()  {
     cout<< "Max sub array is :" << maxSum;
     return 0;
 }
+
+
+
+

@@ -1,4 +1,5 @@
-//1. // #include<iostream>
+//1. 
+// #include<iostream>
 // #include<vector>
 
 // using namespace std;
@@ -14,7 +15,8 @@
 
 
 
-// 2. // #include<iostream>
+// 2. 
+// #include<iostream>
 // #include<vector>
 
 // using namespace std;
@@ -56,20 +58,23 @@
 
 // for Each loop in the vector
 
-#include<iostream>
-#include<vector>
+// #include<iostream>
+// #include<vector>
 
-using namespace std;
+// using namespace std;
 
-int main () {
-    vector<int> vec(5,1); 
-     for (int i : vec) { // for Each loop in the vector
-        cout << "The values are:" << i << endl;
+// int main () {
+//     vector<int> vec(5,1); 
+//      for (int i : vec) {      // for Each loop in the vector
 
-     }
+//         cout << "The values are: " << i << endl;
+
+//      }
      
-    return 0;
-}
+//     return 0;
+// }
+
+
 
 
 
