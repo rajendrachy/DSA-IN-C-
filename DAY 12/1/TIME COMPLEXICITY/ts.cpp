@@ -2,8 +2,8 @@
 
 
 // LINEAR SEARCH -> best case and worst case
-// Best case -> find at the first i.e target element
-// Worst case -> find at the last i.e target element
+// Best Case -> Find at the first i.e target element
+// Worst Case -> Find at the last i.e target element
 
 
 
@@ -11,7 +11,7 @@
 //________ Big O Notation___________________ -> worst case comparasion(upper bound)
 
 // eg, 4n^2 + 3n + 5 -> O(n^2)
-// step to find time complexicity ::
+// Step to find time complexicity ->
 // 1. Ignore constants
 // 2. Take a largest term From .... 
 
