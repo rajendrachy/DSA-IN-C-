@@ -22,13 +22,14 @@ using namespace std;
 // -----------------pointer to pointer-----------------------------
 int main () {
     int a = 10;
-    int *ptr = &a;
+    int *ptr = &a; 
     int **ptr2 = &ptr;
 
     cout << &ptr << endl; // Print the address 
     cout << ptr2 << endl; // Also print the address
+    cout << *(&a) << endl;
     cout << *ptr << endl; // 10
-    cout << **ptr2 << endl; // 10
+    cout << **ptr2 << endl; // 10 // * => dereference operator -> it means value at address
     return 0;
 }
 
