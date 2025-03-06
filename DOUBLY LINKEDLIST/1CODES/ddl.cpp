@@ -21,10 +21,12 @@ public:
         head = NULL;
     }
 
+
+
     // -------------- Insert At Start ------------------------
     void push_front(int val) {
-        Node* newNode = new Node(val);
-        if (head == NULL) {  // If list is empty
+        Node* newNode = new Node(val); // Create a new Node
+        if (head == NULL) {  // Check If list is empty
             head = tail = newNode;
         } else {
             newNode->next = head;
@@ -34,24 +36,24 @@ public:
     }
 
 
+
     // ----Insert At End------------------------
-    // void push_back(int val) {
-    //     Node* newNode = new Node(val);//create a new node
+    void push_back(int val) {
+        Node* newNode = new Node(val);//create a new node
 
-    //     if(head == NULL) {
-    //         head = tail = newNode;
-    //     } else {
-    //         newNode->prev = tail;
-    //         tail->next = newNode;
-    //         tail = newNode;
-    //     }
-    // }
-
-
-
-    //------------------------Delete Front-------------------------
+        if(head == NULL) {
+            head = tail = newNode;
+        } else {
+            newNode->prev = tail;
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
 
 
+
+
+    //------------------------Delete Front --- or ---POP Front------------------------
     void pop_front() {
         if(head == NULL) {
             cout << "DDL is Empty";
@@ -109,17 +111,17 @@ int main() {
     ddl.print();  // Output: 3 <-> 2 <-> 1 <-> NULL
 
 //-----------Insert at End----------------------
-    // ddl.push_back(10);
-    // ddl.push_back(20);
-    // ddl.push_back(30);
-    // ddl.print();
+    ddl.push_back(10);
+    ddl.push_back(20);
+    ddl.push_back(30);
+    ddl.print();
 
 
     // -----Pop Front---------------
     ddl.pop_front();
     ddl.print();
 
-
+    //---------POP Back------------
     ddl.pop_back();
     ddl.print();
 

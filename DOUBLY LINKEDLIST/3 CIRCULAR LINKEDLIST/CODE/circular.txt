@@ -1,0 +1,2 @@
+tail point to the head of the linked list 
+head = tail->next
