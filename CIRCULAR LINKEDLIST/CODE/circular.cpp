@@ -53,6 +53,49 @@ public:
 
    }
 
+
+   //---------------------deleteAtHead-----------------------
+   void deleteAtHead() {
+      if(head == NULL) {
+         return;
+      }
+
+      else if(head == tail) { //single node
+           delete head;
+           head = tail = NULL;
+      } else { // 2 or more
+          Node* temp = head;
+          head = head->next;
+          tail->next = head;
+          temp->next = NULL;
+          delete temp;
+      }
+   }
+
+
+
+//---------------deleteAtTail------------------------------
+   void deleteAtTail() {
+   if(head == NULL) {
+      return;
+   } else if(head == tail) {
+     delete head;
+     head = tail = NULL;
+   } else {
+      Node* temp = tail;
+      Node* prev = head;
+
+      while(prev->next != tail) {
+         prev = prev->next;
+      }
+      tail = prev;
+      tail->next = head;
+
+      temp->next = NULL;
+      delete temp;
+
+   }
+   }
    //--------------traversing------------------
    void display() {
       if(head == NULL) {
@@ -70,6 +113,7 @@ public:
     cout << endl;
    }
 
+
 };
 
 
@@ -85,6 +129,19 @@ int main() {
    cll.insertAtTail(20);
    cll.insertAtTail(30);
    cll.display();
+
+
+
+   cll.deleteAtHead();
+   cll.display();
+
+
+   cll.deleteAtTail();
+   cll.display();
+
     return 0;
 }
+
+
+
 
